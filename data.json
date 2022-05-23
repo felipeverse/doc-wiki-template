@@ -1,0 +1,45 @@
+{
+    "modules":
+        {"Financeiro": {
+            "path": "./modules/Financeiro/",
+            "manuals": {
+                "Manual 01": {
+                    "filename": "teste01.md"
+                },
+                "Manual 02": {
+                    "filename": "teste02.md"
+                },
+                "Manual 03": {
+                    "filename": "teste03.md"
+                }
+            }}
+        },
+        {"Gestão de Frota": {
+            "path": "./modules/Gestao de Frota/",
+            "manuals": {
+                "Manual 01": {
+                    "filename": "teste01.md"
+                },
+                "Manual 02": {
+                    "filename": "teste02.md"
+                },
+                "Manual 03": {
+                    "filename": "teste03.md"
+                }
+            }}
+        },
+        {"SM": {
+            "path":"./modules/SM/",
+            "manuals": {
+                "Manual 01": {
+                    "filename": "teste01.md"
+                },
+                "Manual 02": {
+                    "filename": "teste02.md"
+                },
+                "Manual 03": {
+                    "filename": "teste03.md"
+                } 
+            }}
+        }
+}

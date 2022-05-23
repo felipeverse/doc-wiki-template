@@ -1,119 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOGG - Manuais</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SOGG - Manuais</title>
+    <!-- bootstrap CSS files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
-  <link href="./css/features.css" rel="stylesheet" />
-  <link href="./css/sidebars.css" rel="stylesheet" />
+    <!-- my css files -->
+    <link href="./css/basic.css" rel="stylesheet" />
+    <link href="./css/features.css" rel="stylesheet" />
+    <link href="./css/sidebars.css" rel="stylesheet" />
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js" ></script>
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
+    <!-- load data and scripts files -->
+    <script src="./data.json"></script>
+    <script src="./js/main.js"></script>
+  </head>
 
-  <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-  <script
-    type="module"
-    src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
-  ></script>
-
-  <!-- load data file -->
-  <script src="./data.json"></script>
-
-  <script src="./js/main.js"></script>
-
-</head>
-
-<body>
-  <div class="py-2 my-2 text-center">
-    <div class="fs-2 mx-2 my-2">
-      <h1 class="align-items-center">
-        <i class="bi bi-journal-bookmark-fill"> SOGG Wiki</i>
-      </h1>
+  <body>
+    <div class="container py-2 my-2 text-center border-bottom">
+      <div class="fs-2 mx-2 my-2">
+        <h1 class="align-items-center">
+          <i class="bi bi-journal-bookmark-fill"> SOGG Wiki</i>
+        </h1>
+      </div>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Manual de utilização do sistema.</p>
+      </div>
     </div>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Manual de utilização do sistema.</p>
-    </div>
-  </div>
 
-  <div class="container px-4 py-3" id="featured-3">
-    <h2 class="pb-2 border-bottom">Manuais</h2>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-3 flex-shrink-0 p-3 bg-white position-fixed" style="width: 280px">
+    <div class="container px-4 py-3" id="featured-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-3 flex-shrink-0 bg-white position-fixed" style="width: 250px">
+            <h2 class="pb-2">Manuais</h2>
 
-          <ul class="list-unstyled ps-0">
+            <ul class="list-unstyled ps-0" id="modulesList">
 
-            <li class="mb-1">
-              <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#sm-collapse" aria-expanded="true">
-                SM
-              </button>
-              <div class="collapse show" id="sm-collapse" style="">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#" class="link-dark rounded" onclick="LoadMarkdown('ManualSm-Exemplo01.md')">Manual 01</a></li>
-                  <li><a href="#" class="link-dark rounded" onclick="LoadMarkdown('ManualSm-Exemplo02.md')">Manual 02</a></li>
-                  <li><a href="#" class="link-dark rounded" onclick="LoadMarkdown('ManualSm-Exemplo03.md')">Manual 03</a></li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="mb-1">
-              <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#financeiro-collapse" aria-expanded="true">
-                Financeiro
-              </button>
-              <div class="collapse show" id="financeiro-collapse" style="">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#" class="link-dark rounded">Manual 01</a></li>
-                  <li><a href="#" class="link-dark rounded">Manual 02</a></li>
-                  <li><a href="#" class="link-dark rounded">Manual 03</a></li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="mb-1">
-              <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#gestaodefrota-collapse" aria-expanded="true">
-                Gestão de Frota
-              </button>
-              <div class="collapse show" id="gestaodefrota-collapse" style="">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#" class="link-dark rounded">Manual 01</a></li>
-                  <li><a href="#" class="link-dark rounded">Manual 02</a></li>
-                  <li><a href="#" class="link-dark rounded">Manual 03</a></li>
-                </ul>
-              </div>
-            </li>
-
-          </ul>
-        </div>
-        <div class="markdown-box col mt-4 offset-3" id="content">
-          <!-- Simply set the `src` attribute to your MD file and win -->
-          <zero-md class="markdown-element" id="markdown-element" src="./modules/SM/ManualSm-Exemplo01.md"></zero-md>
+              <li class="mb-1">
+                <button
+                  class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#sm-collapse" aria-expanded="true">
+                  SM
+                </button>
+                <div class="collapse show" id="sm-collapse" style="">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <a href="#" class="link-dark rounded" onclick="LoadMarkdown('ManualSm-Exemplo01.md')">
+                          Manual 01
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="link-dark rounded" onclick="LoadMarkdown('ManualSm-Exemplo02.md')">Manual 02
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="link-dark rounded"
+                        onclick="LoadMarkdown('ManualSm-Exemplo03.md')"
+                        >Manual 03</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+          <div class="markdown-box col offset-3 width: 75%" id="content">
+            <!-- Simply set the `src` attribute to your MD file and win -->
+            <zero-md
+              class="markdown-element"
+              id="markdown-element"
+              src="./modules/SM/ManualSm-Exemplo01.md"
+            ></zero-md>
+          </div>
         </div>
       </div>
     </div>
 
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
-
-</body>
-
+    <!-- Bootstrap files -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
