@@ -4,6 +4,7 @@
 const modules_dir = "./modules";
 
 $modules = get_modules(modules_dir);
+var_dump($modules);
 
 foreach ($modules as $module) {
     $module->manuals = get_manuals($module->path);
@@ -12,7 +13,6 @@ foreach ($modules as $module) {
 file_put_contents(__DIR__ . "/data.json", json_encode($modules, JSON_PRETTY_PRINT));
 
 $json = json_encode($modules, JSON_PRETTY_PRINT);
-var_dump($json);
 
 function get_modules($dir)
 {
@@ -28,7 +28,7 @@ function get_modules($dir)
         }
     }
 
-    return $modules;
+    return isset($modules) ? $modules : [];
 }
  
 function get_manuals($dir) {
