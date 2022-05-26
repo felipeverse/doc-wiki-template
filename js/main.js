@@ -30,7 +30,7 @@ function menuRender (data) {
         }
     } else {
         document.getElementById('content-container').remove();
-        newElement = document.createElement("h3");
+        newElement = document.createElement("h4");
         newElement.setAttribute("class", "text-center m-4");
 
         newElement.appendChild(document.createTextNode("Nothing to see here yet."));
