@@ -1,9 +1,9 @@
 <?php
 
 // Diretório padrão dos módulos do sistema
-const modules_dir = "./modules";
+const MODULES_DIR = "./modules";
 
-$modules = get_modules(modules_dir);
+$modules = get_modules(MODULES_DIR);
 if (empty($modules))
     echo "empty modules directory." . "\n";
 
